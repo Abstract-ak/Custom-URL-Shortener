@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/url", urlRoute);
 app.use("/user", userRoute);
-app.use("/", staticRoute);
+app.use("/", staticRoute);    //staticRoute for GET request
 
 app.get("/url/:shortId", async (req, res) => {
   const shortId = req.params.shortId;

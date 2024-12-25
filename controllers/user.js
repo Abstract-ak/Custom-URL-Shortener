@@ -8,9 +8,19 @@ async function handleUserSignUp(req, res) {
     password,
   });
 
-  return res.render("home");
+  return res.redirect("/");
+}
+
+async function handleUserlogin(req, res) {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email, password });
+  // console.log("user", user);
+  if (!user) return res.render("login", { error: "Invalid Credentials!" });
+
+  return res.redirect("/");
 }
 
 module.exports = {
   handleUserSignUp,
-}
+  handleUserlogin,
+};
