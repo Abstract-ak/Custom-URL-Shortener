@@ -10,4 +10,8 @@ router.get("/", async (req, res) => {
   });
 });
 
+router.get('/user', (req, res) => {
+  return res.render("signup");
+})
+
 module.exports = router;
