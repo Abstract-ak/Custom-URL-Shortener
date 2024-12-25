@@ -1,0 +1,6 @@
+Define mongoose Database---
+
+1/  mongoose require
+2/  new mongoose schema : maping propert{type}
+3/  mongoose model - model specific name
+4/  module export
