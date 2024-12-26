@@ -1,6 +1,6 @@
 const User = require("../models/user");
-import { v4 as uuidv4 } from "uuid";
-import { setUser } from "../service/auth";
+const { v4: uuidv4 } = require("uuid");
+const { setUser } = require("../service/auth");
 
 async function handleUserSignUp(req, res) {
   const { name, email, password } = req.body;
